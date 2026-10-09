@@ -61,6 +61,8 @@ const precosPorMarca = {
     "Winston Silver": 115.00,
     "Winston P. Mint": 145.00,
     "Winston Classic": 115.00,
+    "classic banca": 43.00,
+    "LA": 230.00,
 
 };
 
