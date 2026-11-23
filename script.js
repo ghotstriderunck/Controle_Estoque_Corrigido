@@ -135,11 +135,6 @@ function updateTable() {
     atualizarFinalizadas();
 }
 
-    document.getElementById('totalP').textContent = totalP;
-    document.getElementById('totalV').textContent = 'R$' + totalV.toFixed(2);
-
-    atualizarFinalizadas();
-
 
 // ========================================
 // FINALIZAR VENDA
@@ -219,30 +214,6 @@ function atualizarFinalizadas() {
         area.appendChild(div);
     });
 }
-
-
-    area.innerHTML = '';
-
-    Object.keys(marcas).forEach(marca => {
-        const div = document.createElement('div');
-        div.className = 'marca-finalizada';
-
-        const compradoresHTML = marcas[marca].compradores.map(item => {
-            return `
-                <div class="comprador-finalizado">
-                    ${item.nome}: ${item.qtdpedidos} pedidos | R$ ${item.total.toFixed(2)}
-                </div>
-            `;
-        }).join('');
-
-        div.innerHTML = `
-            <div class="marca-titulo">${marca}</div>
-            <div class="marca-total">Total: ${marcas[marca].totalPedidos} pedidos</div>
-            ${compradoresHTML}
-        `;
-
-        area.appendChild(div);
-    });
 
 
 // ========================================
